@@ -1,7 +1,10 @@
-# srvbees
+# srvbees 🐝
 
 Very simple service exporting metrics to Prometheus.
 
+![Showcase](image.png)
+
 ## Running
 
-You can use the `.justfile` to try out the application.
+You only need `docker` to try this out. Commands for building and running the
+service and prometheus are in the `.justfile`.
