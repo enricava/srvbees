@@ -1,0 +1,22 @@
+networks:
+  localprom:
+    driver: bridge
+
+services:
+  srvbees:
+    build:
+      context: .
+      target: final
+    networks:
+      - localprom
+    ports:
+      - 8081:8081
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+    networks:
+      - localprom
+    ports:
+      - 9090:9090

@@ -4,7 +4,9 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['localhost:9090']
-  - job_name: 'my_app'
+      - targets:
+          - 'prometheus:9090'
+  - job_name: 'srvbees'
     static_configs:
-      - targets: ['localhost:8081']
+      - targets:
+          - 'srvbees:8081'
