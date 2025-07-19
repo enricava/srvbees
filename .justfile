@@ -1,6 +1,6 @@
 # Run the application
 run:
-    docker compose up -d
+    docker compose up -d --build
 
 # Stop the application
 stop:
